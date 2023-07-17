@@ -2,7 +2,7 @@ package CodonCount;
 
 import edu.duke.FileResource;
 import java.util.HashMap;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class CodonCount{
     private HashMap<String, Integer> codonMap;
