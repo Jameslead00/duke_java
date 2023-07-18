@@ -7,6 +7,13 @@ public class Main{
         //tester.testUniqueIP();
         //tester.testPrintAllHigherThanNum(800);
         //tester.testUniqueIPVisitsOnDay("Mar 24");
-        tester.testCountUniqueIPsInRange(200, 299);
+        //tester.testCountUniqueIPsInRange(200, 299);
+        //tester.testCountVisitsPerIP();
+        //tester.testMostNumberVisitsByIP();
+        //tester.testiPsMostVisits();
+        //tester.testIpsForDays();
+        //tester.testDaywithMostIPVisits();
+        tester.testIpsWithMostVisitsOnDay();
+
     }
 }
