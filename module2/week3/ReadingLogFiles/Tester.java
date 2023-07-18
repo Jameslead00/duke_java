@@ -25,13 +25,13 @@ public class Tester {
 
     public void testPrintAllHigherThanNum(int num) {
         LogAnalyzer la = new LogAnalyzer();
-        la.readFile("short-test_log.txt");
+        la.readFile("weblog1.txt");
         la.printAllHigherThanNum(num);
     }
 
     public void testUniqueIPVisitsOnDay(String someday) {
         LogAnalyzer la = new LogAnalyzer();
-        la.readFile("weblog-short_log.txt");
+        la.readFile("weblog1.txt");
         ArrayList<String> IPs = la.uniqueIPVisitsOnDay(someday);
         for(String ip : IPs) {
             System.out.println(ip);
@@ -41,7 +41,7 @@ public class Tester {
 
     public void testCountUniqueIPsInRange(int low, int high){
         LogAnalyzer la = new LogAnalyzer();
-        la.readFile("short-test_log.txt");
+        la.readFile("weblog1.txt");
         int count = la.countUniqueIPsInRange(low, high);
         System.out.println("There are " + count + " unique IPs in the range.");
     }
