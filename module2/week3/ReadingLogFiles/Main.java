@@ -5,8 +5,8 @@ public class Main{
         Tester tester = new Tester();
         //tester.testLogAnalyzer();
         //tester.testUniqueIP();
-        //tester.testPrintAllHigherThanNum(300);
-        //tester.testUniqueIPVisitsOnDay("Sep 30");
-        tester.testCountUniqueIPsInRange(300, 399);
+        //tester.testPrintAllHigherThanNum(800);
+        //tester.testUniqueIPVisitsOnDay("Mar 24");
+        tester.testCountUniqueIPsInRange(200, 299);
     }
 }
