@@ -1,7 +1,5 @@
 package duke_java.module2.week4.vigenereProgram;
 
-import java.io.File;
-
 import edu.duke.FileResource;
 //import java.util.*;
 
