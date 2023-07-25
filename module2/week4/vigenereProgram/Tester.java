@@ -1,6 +1,7 @@
 package duke_java.module2.week4.vigenereProgram;
 
 import edu.duke.FileResource;
+import java.util.*;
 
 public class Tester{
 
@@ -31,6 +32,16 @@ public class Tester{
         String encr = vc.encrypt(msg);
         System.out.println("Encrypted: " + encr);
         System.out.println("Decrypted: " + vc.decrypt(encr));
+    }
+
+    public void testVigenereBreaker(){
+        VigenereBreaker vb = new VigenereBreaker();
+        /* FileResource fr = new FileResource("data/secretmsg1.txt");
+        String msg = fr.asString();
+        String key = "flut";
+        int[] keyArr = vb.tryKeyLength(msg, key.length(), 'e');
+        System.out.println(Arrays.toString(keyArr)); */
+        vb.breakVigenere();
     }
     
 }
