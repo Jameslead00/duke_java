@@ -1,7 +1,7 @@
 package duke_java.module2.week4.vigenereProgram;
 
 import edu.duke.FileResource;
-import java.util.*;
+//import java.util.*;
 
 public class Tester{
 

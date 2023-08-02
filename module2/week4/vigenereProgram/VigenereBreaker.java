@@ -1,7 +1,7 @@
 package duke_java.module2.week4.vigenereProgram;
 import java.util.*;
 import edu.duke.*;
-import java.io.*;
+//import java.io.*;
 
 public class VigenereBreaker {
     public String sliceString(String message, int whichSlice, int totalSlices) {
@@ -33,6 +33,15 @@ public class VigenereBreaker {
         String decrypted = vc.decrypt(msg);
         System.out.println(decrypted);
 
+    }
+
+    public HashSet<String> readDictionary(FileResource fr){
+        HashSet<String> words = new HashSet<String>();
+        for(String word : fr.words()){
+            word = word.toLowerCase();
+            words.add(word);
+        }
+        return words;
     }
     
 }
