@@ -28,11 +28,16 @@ public class VigenereBreaker {
         //WRITE YOUR CODE HERE
         FileResource fr = new FileResource();
         String msg = fr.asString();
-        int [] key = tryKeyLength(msg, 4, 'e');
-        VigenereCipher vc = new VigenereCipher(key);
-        String decrypted = vc.decrypt(msg);
-        System.out.println(decrypted);
-
+        FileResource dict = new FileResource("dictionaries/English");
+        //int [] key = tryKeyLength(msg,38, 'e');
+        HashSet<String> dictionary = readDictionary(dict);
+        //VigenereCipher vc = new VigenereCipher(key);
+        //String decrypted = vc.decrypt(msg);
+        //System.out.println(decrypted);
+        String decrypted = breakForLanguage(msg, dictionary);
+        System.out.println(decrypted.substring(0,100));
+        int count = countWords(decrypted, dictionary);
+        System.out.println("Count: " + count);
     }
 
     public HashSet<String> readDictionary(FileResource fr){
@@ -53,5 +58,29 @@ public class VigenereBreaker {
             }
         }
         return count;
+    }
+
+    public String breakForLanguage(String encrypted, HashSet<String> dictionary){
+        String decrypted = "";;
+        int[] keys = {};
+        VigenereCipher vc;
+        int count = 0;
+        int max = 0;
+        int keyLen = 0;
+        for(int i = 1; i <= 100; i++){
+            keys = tryKeyLength(encrypted, i, 'e');
+            vc = new VigenereCipher(keys);
+            String decrypt = vc.decrypt(encrypted);
+            count = countWords(decrypt, dictionary);
+            if(count > max){
+                max = count;
+                decrypted = decrypt;
+                keyLen = i;
+            }
+        }
+        System.out.println("KeyLen with most real words: " + keyLen);
+
+
+        return decrypted;
     }
 }
